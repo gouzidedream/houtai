@@ -1,0 +1,20 @@
+
+.practice_jo_form {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.practice_jo_btn {
+    display: flex;
+    justify-content: center
+}
+
+.map {
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+}

@@ -1,0 +1,54 @@
+
+<div>
+    <el-form :model="practiceJobForm" label-width="100px" class="practice_jo_form">
+        <el-row>
+            <el-form-item label="工作环境:">
+                <el-upload
+                    action="https://jsonplaceholder.typicode.com/posts/"
+                    list-type="picture-card"
+                    :on-preview="handlePictureCardPreview"
+                    :on-remove="handleRemove">
+                    <i class="el-icon-plus"></i>
+                </el-upload>
+            </el-form-item>
+            <el-dialog :visible.sync="dialogVisible">
+                <img width="100%" :src="dialogImageUrl" alt="">
+            </el-dialog>
+            <el-col :span="12">
+                <el-form-item label="公司名称:" prop="title">
+                    <el-input type="text" v-model="practiceJobForm.title"></el-input>
+                </el-form-item>
+                <el-form-item label="工作职称:" prop="title">
+                    <el-input type="text" v-model="practiceJobForm.title"></el-input>
+                </el-form-item>
+                <el-form-item label="工作地点:" prop="title">
+                    <el-input type="text" @keyup.enter.native='seachcity' v-model="practiceJobForm.title">
+                        <el-button slot="append" @click="seachcity" icon="el-icon-search"></el-button>
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="工作时间:" prop="title">
+                    <el-input type="text" v-model="practiceJobForm.title"></el-input>
+                </el-form-item>
+            </el-col>
+
+            <el-col :span="12">
+                <el-form-item label="薪资待遇:" prop="title">
+                    <el-input type="text" v-model="practiceJobForm.title"></el-input>
+                </el-form-item>
+                <el-form-item label="岗位职责:" prop="title">
+                    <el-input type="text" v-model="practiceJobForm.title"></el-input>
+                </el-form-item>
+                <el-form-item label="福利待遇:" prop="title">
+                    <el-input type="text" v-model="practiceJobForm.title"></el-input>
+                </el-form-item>
+            </el-col>
+
+            <el-col :span="24" class="practice_jo_btn">
+                <el-button type="primary" @click="submitForm('numberValidateForm')">提交</el-button>
+                <el-button @click="resetForm('numberValidateForm')">重置</el-button>
+            </el-col>
+        </el-row>
+    </el-form>
+
+    <div class="map" ref="map"></div>
+</div>
